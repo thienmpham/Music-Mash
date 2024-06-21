@@ -8,13 +8,14 @@
       } */
     body { 
         margin: 0;
-        padding: 1rem;
+        padding: 3% 0 1rem 3%;
         font-family: 'Open Sans', sans-serif;
         width: 100vw;
         overflow-x: hidden;
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
+        letter-spacing: 0.05rem;
         
     }
     html {
@@ -31,6 +32,10 @@
     }
     button {
         all: unset;
+
+    }
+    button:hover {
+        cursor: pointer;
     }
     button > * {
         pointer-events: none;
@@ -75,12 +80,15 @@
         width: 60%;
         background-color: lightblue;
         
+       
+        
     }
     .header-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        margin: 0 0 1.5rem 0;
         
     }
     #text-music-mash {
@@ -116,9 +124,10 @@
     .categories-container {
         display: flex;
         width: 100%;
+        padding: 0 0 0 1rem;
        
     }
-    .categories-container h4 {
+    .categories-container button {
         background-color: #302f41;
         color: white;
         margin: 0 2% 0 0;
@@ -126,18 +135,54 @@
         font-weight: 100;
         font-size: 60%;
         width: 15%;
+        border-radius: 0.2rem;
+        
+    }
+    .categories-container button:hover {
+        background-color: rgb(137, 192, 255);
+    }
+    #text-search {
+        border-radius: 0;
+        background-color: #302F41;
+        padding: 0 0 0 2%;
+        color: #bababa;
+    }
+    #text-search::placeholder {
+        color: #bababa;
+        font-weight: 100;
+        font-size: 0.7rem;
+       
     }
 
 
     /* MUSIC BOX */
     #music-box-container {
         background-color: lightcyan;
-        margin: 1rem;
+        position: relative;
         padding: 1rem;
         min-height: 20rem;
-      
 
-
+    }
+    .playlist-panel {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        border-radius: 0 0.2rem 0.2rem 0;
+        background-color: #302F41;
+        
+        
+    }
+    #left-panel {
+        right: -2rem;
+    }
+    .playlist-panel-content {
+        width: 1rem;
+       
+        padding: 0.5rem;
+    }
+    .playlist-panel-content img {
+        filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(57deg) brightness(103%) contrast(101%);
+        width: 100%;
     }
     
 
@@ -157,6 +202,8 @@
         width: 9rem;
         height: 1.4rem;
         border: none;
+        padding: 0 0 0 2%;
+
     }
 
     .music-box {
@@ -167,10 +214,91 @@
         
     }
 
+
+
     #right {
         background-color: cadetblue;
         width: 40%;
+        margin: 0 3rem 0 5rem;
     }
+
+    /* START MASH */
+    #start-mash {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .icon-plus-container {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .icon-plus-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #302F41;
+        width: 5rem;
+        margin: 0 5%;
+        border-radius: 0.2rem;
+
+    }
+    .icon-plus {
+        filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(57deg) brightness(103%) contrast(101%);
+        padding: 2rem;
+        width: 20%;
+        /* background-color: #302F41; */
+    }
+    #button-mash-container {
+        display: flex;
+        justify-content: center ;
+        margin: 5% 0;
+    }
+    #button-mash {
+        background-color: #302F41;
+        padding: 1% 2%;
+        color: white;
+        font-weight: 100;
+        font-size: 0.8rem;
+        border-radius: 0.2rem;
+
+        
+       
+    }
+    #button-mash:hover {
+        background-color: rgb(137, 192, 255);
+
+    }
+    #mashed-playlist {
+        display: flex;
+        justify-content: center;
+       
+
+    }
+    #mashed-playlist-container {
+        position: relative;
+        min-height: 16rem;
+        width: 90%;
+        background-color: aqua;
+        padding: 1rem;
+    }
+    #right-panel {
+        right: -2rem;
+    }
+    #mashed-playlist h1 {
+        font-weight: 500;
+        text-align: center;
+    
+    }
+    #mashed-playlist-content {
+        background-color: beige;
+        min-height: 12rem;
+
+    }
+
+
+
+
 
 
 }
